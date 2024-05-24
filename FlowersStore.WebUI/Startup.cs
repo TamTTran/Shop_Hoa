@@ -43,7 +43,7 @@ namespace FlowersStore.WebUI
 
             services.AddDbContext<FlowersStoreDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("FlowersStoreDbContext"));
+                options.UseSqlServer(Configuration.GetConnectionString("FlowersStore"));
             })
             .AddIdentity<User, UserRole>(config => 
             {
@@ -90,9 +90,10 @@ namespace FlowersStore.WebUI
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-            services.SeedData();
-            services.SeedAdmin();
+           // services.SeedData();
+           // services.SeedAdmin();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -118,6 +119,7 @@ namespace FlowersStore.WebUI
             app.UseAuthentication();
 
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

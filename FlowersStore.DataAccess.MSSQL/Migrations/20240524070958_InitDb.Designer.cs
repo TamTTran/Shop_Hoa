@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlowersStore.DataAccess.MSSQL.Migrations
 {
     [DbContext(typeof(FlowersStoreDbContext))]
-    [Migration("20210817110433_InitDb")]
+    [Migration("20240524070958_InitDb")]
     partial class InitDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

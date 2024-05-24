@@ -30,6 +30,7 @@ namespace FlowersStore.DataAccess.MSSQL
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
 
+          //  modelBuilder.SeedData();
             base.OnModelCreating(modelBuilder);
         }
     }
