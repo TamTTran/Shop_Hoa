@@ -92,8 +92,8 @@ namespace FlowersStore.WebUI
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-           // services.SeedData();
-           // services.SeedAdmin();
+            services.SeedData();
+            services.SeedAdmin();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
